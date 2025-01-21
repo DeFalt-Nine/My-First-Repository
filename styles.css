@@ -35,7 +35,7 @@ header h1 {
 }
 
 .gallery img:hover {
-    width: 400px; /* Enlarges the image */
+    width: 400px; 
     flex-shrink: 0;
 }
 
