@@ -18,27 +18,29 @@ header h1 {
     color: #ff6600;
 }
 
-.gallery {
+gallery {
     display: flex;
+    flex-wrap: wrap; /* Ensure the videos wrap to a new line when necessary */
     gap: 10px;
-    overflow: hidden;
-    padding: 20px;
     justify-content: center;
-    flex-wrap: wrap;
+    padding: 20px;
 }
 
 .gallery video {
-    width: 200px;
+    width: 200px; /* Default size */
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for scaling */
     background-color: #000;
 }
 
 .gallery video:hover {
-    transform: scale(1.2);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.7);
+    transform: scale(1.2); /* Slight enlargement */
+    max-width: 300px; 
+    z-index: 10; /* Bring the video above others */
+    position: relative; /* Avoid disrupting the layout */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.7); /* Enhanced shadow */
 }
 
 footer {
