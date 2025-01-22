@@ -1,15 +1,19 @@
 body {
     margin: 0;
     padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Viewport height */
     background-color: #0d0d0d;
     color: #fff;
-    font-family: Arial, sans-serif;
+    overflow: hidden; /* Prevent scrolling */
 }
 
 header {
-    text-align: center;
-    padding: 20px;
     background-color: #1a1a1a;
+    padding: 20px;
+    text-align: center;
 }
 
 header h1 {
@@ -18,31 +22,32 @@ header h1 {
     color: #ff6600;
 }
 
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center-align the gallery */
-    gap: 20px;
-    padding: 20px;
-}
-
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Responsive grid */
+    grid-auto-rows: 1fr; /* Keep videos proportional */
     gap: 10px; /* Spacing between videos */
     width: 100%;
-    max-width: 800px; /* Limit the gallery width */
+    height: 100%;
     padding: 10px;
     box-sizing: border-box;
 }
 
 .gallery video {
     width: 100%; /* Fill the grid cell */
-    height: auto; /* Maintain aspect ratio */
+    height: 100%; /* Maintain aspect ratio */
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
     object-fit: cover; /* Scale to fit without stretching */
     background-color: #000;
+}
+
+.gallery video:hover {
+    transform: scale(1.2); /* Slight enlargement */
+    max-width: 300px; 
+    z-index: 10; /* Bring the video above others */
+    position: relative; /* Avoid disrupting the layout */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.7); /* Enhanced shadow */
 }
 
 footer {
@@ -50,6 +55,7 @@ footer {
     padding: 10px;
     background-color: #1a1a1a;
     color: #aaa;
+    margin-top: 20px;
 }
 
 footer a {
@@ -60,3 +66,4 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
+
