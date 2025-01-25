@@ -2,19 +2,18 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    flex-direction: column; /* Arrange elements in a column */
-    align-items: center;
-    justify-content: space-between; /* Space out header, main, and footer */
+    flex-direction: column; /* Stack elements vertically */
     min-height: 100vh; /* Ensure full viewport height */
     background-color: #0d0d0d;
     color: #fff;
 }
 
-header {
+header, footer {
+    width: 100%; /* Full width for header and footer */
+    text-align: center;
     background-color: #1a1a1a;
     padding: 20px;
-    text-align: center;
-    width: 100%; /* Ensure it spans full width */
+    box-sizing: border-box;
 }
 
 header h1 {
@@ -24,19 +23,21 @@ header h1 {
 }
 
 main {
-    flex: 1; /* Let main take up the remaining space */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+    flex: 1; /* Allow main to grow and fill available vertical space */
+    width: 100%; /* Full width */
+    display: flex; /* Use flexbox for layout inside main */
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Responsive grid */
     gap: 10px; /* Spacing between videos */
-    width: 100%;
-    padding: 10px;
+    width: 100%; /* Gallery spans full width */
+    max-width: 1200px; /* Optional: Limit gallery width */
     box-sizing: border-box;
 }
 
@@ -57,11 +58,7 @@ main {
 }
 
 footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #1a1a1a;
     color: #aaa;
-    width: 100%; /* Ensure it spans full width */
 }
 
 footer a {
