@@ -2,14 +2,14 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    min-height: 100vh; /* Ensure full viewport height */
+    flex-direction: column;
+    min-height: 100vh;
     background-color: #0d0d0d;
     color: #fff;
 }
 
 header, footer {
-    width: 100%; /* Full width for header and footer */
+    width: 100%;
     text-align: center;
     background-color: #1a1a1a;
     padding: 20px;
@@ -19,42 +19,42 @@ header, footer {
 header h1 {
     margin: 0;
     font-size: 2.5rem;
-    color: #ff6600;
+    color: #00ff00;
 }
 
 main {
-    flex: 1; /* Allow main to grow and fill available vertical space */
-    width: 100%; /* Full width */
-    display: flex; /* Use flexbox for layout inside main */
-    justify-content: center; /* Center the content horizontally */
-    align-items: center; /* Center the content vertically */
+    flex: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
     box-sizing: border-box;
 }
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Responsive grid */
-    gap: 10px; /* Spacing between videos */
-    width: 100%; /* Gallery spans full width */
-    max-width: 1200px; /* Optional: Limit gallery width */
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+    width: 100%;
+    max-width: 1200px;
     box-sizing: border-box;
 }
 
 .gallery video {
-    width: 100%; /* Fill the grid cell */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%;
+    height: auto;
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-    object-fit: cover; /* Scale to fit without stretching */
+    object-fit: cover;
     background-color: #000;
-    transition: transform 0.3s ease-in-out; /* Smooth transition */
+    transition: transform 0.3s ease-in-out;
 }
 
 .gallery video:hover {
-    transform: scale(1.1); /* Slight enlargement */
-    z-index: 1; /* Bring the video above others */
-    position: relative; /* Ensure proper stacking */
+    transform: scale(1.1);
+    z-index: 1;
+    position: relative;
 }
 
 footer {
